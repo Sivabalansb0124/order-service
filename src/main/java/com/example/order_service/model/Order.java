@@ -9,31 +9,21 @@ import java.util.List;
 public class Order {
     @Id
     private String id;
-    private int customerId;
-    private List<OrderItem> items;
-    private String status;
 
-    public String getId() {
-        return id;
-    }
+    private String customerId;
+    private List<String> productIds;
+    private String status; // pending, canceled, dispatched, shipped, delivered
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    // Getters and setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    public int getCustomerId() {
-        return customerId;
-    }
+    public String getCustomerId() { return customerId; }
+    public void setCustomerId(String customerId) { this.customerId = customerId; }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
+    public List<String> getProductIds() { return productIds; }
+    public void setProductIds(List<String> productIds) { this.productIds = productIds; }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 }
